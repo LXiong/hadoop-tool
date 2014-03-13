@@ -27,7 +27,7 @@ public interface HEntityDao<T extends Entity> {
     public List<T> inquireByKeys(final List<String> keyValues);
 
     /**
-     * 插入,返回keyValue
+     * 插入,返回keyValue，实体对应的字段必须全部赋值
      *
      * @param entityMap
      */
@@ -42,7 +42,7 @@ public interface HEntityDao<T extends Entity> {
     public T insertAndInquire(final Map<String, String> entityMap);
 
     /**
-     * 批量插入，无缓存
+     * 批量插入，实体对应的字段必须全部赋值
      *
      * @param entityMapList
      */
